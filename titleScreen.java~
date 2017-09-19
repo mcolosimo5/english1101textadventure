@@ -17,13 +17,8 @@ public class titleScreen extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JPanel empty = new JPanel();
-    add(empty);
-    
-    JPanel empty2 = new JPanel();
     JLabel content = new JLabel("Welcome to the Text Adventure");
-    empty2.add(content);
-    add(empty2);
+    add(content);
     
     JButton play = new JButton ("Play");
     play.addActionListener(this);

@@ -17,14 +17,10 @@ public class levelScreen extends JFrame implements ActionListener  {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    
-    JLabel contentGameScreen2 = new JLabel("A man is walking through a dark forest. There is a split in the path. The man decides to...");
-    add(contentGameScreen2);
-    
-    JButton goLeft = new JButton ("Go to the Left");
+    JButton level1 = new JButton ("Level 1");
     goLeft.addActionListener(this);
     
-    JButton goRight = new JButton ("Go to the Right");
+    JButton level2 = new JButton ("Level 2");
     goRight.addActionListener(this);
     
     add(goRight);

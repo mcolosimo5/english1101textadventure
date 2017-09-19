@@ -13,7 +13,7 @@ public class gameScreen extends JFrame  {
   
   public gameScreen() {
     super("Play Game");
-    setSize(600, 600);
+    setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
