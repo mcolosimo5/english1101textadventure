@@ -1,0 +1,37 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class gameScreen2 extends JFrame implements ActionListener  {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new gameScreen().setVisible(true);
+  }
+  
+  public gameScreen2() {
+    super("Play Game");
+    setSize(600, 600);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    
+    JLabel contentGameScreen = new JLabel("Welcome to the text adventure");
+    add(contentGameScreen);
+    
+  }
+  
+  @Override 
+  public void actionPerformed (ActionEvent e) {
+    String a = e.getActionCommand();
+    
+    if (a.equals("Play"))
+          {
+      new gameScreen().setVisible(true);
+    }
+     
+    
+  }
+}
