@@ -42,6 +42,10 @@ public class deathScreen extends JFrame implements ActionListener  {
       new gameScreen().setVisible(true);
     }
      
-    
+    else if (a.equals("No"))
+    {
+
+    }
+      
   }
 }
