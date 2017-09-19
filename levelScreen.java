@@ -24,7 +24,7 @@ public class levelScreen extends JFrame implements ActionListener  {
     level2.addActionListener(this);
     
     JButton level3 = new JButton ("Level 3");
-    level1.addActionListener(this);
+    level3.addActionListener(this);
     
     add(level1);
     add(level2);
