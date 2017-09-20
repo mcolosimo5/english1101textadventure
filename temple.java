@@ -2,22 +2,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class waitScreen extends JFrame implements ActionListener {
+public class temple extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new waitScreen().setVisible(true);
+    new temple().setVisible(true);
   }
   
-  public waitScreen() {
+  public temple() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot. You die.");
+    JLabel content = new JLabel("          You enter the temple. The priest offers you a glowing stick and says ÒIt has magical abilities, use it well.Ó                    ");
     add(content);
     
     JButton cont = new JButton("Continue");
@@ -33,7 +33,8 @@ public class waitScreen extends JFrame implements ActionListener {
     
     if (a.equals("Continue"))
           {
-      new deathScreen().setVisible(true);
+      gameScreen2.sword = false;
+      new gameScreen3().setVisible(true);
     }
    }
 }

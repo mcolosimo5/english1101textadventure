@@ -2,23 +2,31 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class waitScreen extends JFrame implements ActionListener {
+public class fight extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new waitScreen().setVisible(true);
+    new fight().setVisible(true);
   }
   
-  public waitScreen() {
+  public fight() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot. You die.");
+    if (gameScreen2.sword == true)
+    {
+    JLabel content = new JLabel("Inexperienced with your shiny new weapon, you are too slow to attack and are fatally wounded.");
     add(content);
+    }
+    else
+    {
+      JLabel content2 = new JLabel("Inexperienced with your new weapon, you are too slow to attack and are fatally wounded.");
+      add(content2);
+    }
     
     JButton cont = new JButton("Continue");
     cont.addActionListener(this);

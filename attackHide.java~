@@ -1,0 +1,57 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class attackHide extends JFrame implements ActionListener {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new attackHide().setVisible(true);
+  }
+  
+  public attackHide() {
+    super("Play Game");
+    setSize(800, 700);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    JLabel content = new JLabel("You decide to hide and play it safe");
+    add(content);
+    
+    JLabel content2 = new JLabel("After a few hours you hear the fighting die down, and you come out of your hiding place.");
+    add(content2);
+    
+    JLabel content3 = new JLabel("The town’s people are angry that you did not fight.");
+    add(content3);
+    
+    JLabel content4 = new JLabel("They tell you that you must go and find the bandits that ran off with all the treasure.");
+    add(content4);
+    
+    JLabel content5 = new JLabel("You leave the town through the gate and see bandits running in all directions - to the mountains, the swamp, the lake, and the cave.");
+    add(content5);
+    
+    JButton cont = new JButton("Continue");
+    cont.addActionListener(this);
+    add(cont);
+    
+    
+   }
+  
+   @Override 
+  public void actionPerformed (ActionEvent e) {
+    String a = e.getActionCommand();
+    
+    if (a.equals("Continue"))
+          {
+      gameScreen2.sword = false;
+      new deathScreen().setVisible(true);
+    }
+   }
+}
+  
+  
+      
+ 
+  

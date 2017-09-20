@@ -2,16 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class waitScreen extends JFrame implements ActionListener {
+public class blacksmith extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new waitScreen().setVisible(true);
+    new blacksmith().setVisible(true);
   }
   
-  public waitScreen() {
+  public blacksmith() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);

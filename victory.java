@@ -2,25 +2,25 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class waitScreen extends JFrame implements ActionListener {
+public class victory extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new waitScreen().setVisible(true);
+    new victory().setVisible(true);
   }
   
-  public waitScreen() {
+  public victory() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot. You die.");
+    JLabel content = new JLabel("You Completed Level 1!");
     add(content);
     
-    JButton cont = new JButton("Continue");
+    JButton cont = new JButton("Return to Level Menu");
     cont.addActionListener(this);
     add(cont);
     
@@ -31,9 +31,9 @@ public class waitScreen extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Continue"))
+    if (a.equals("Return to Level Menu"))
           {
-      new deathScreen().setVisible(true);
+      new levelScreen().setVisible(true);
     }
    }
 }

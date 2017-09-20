@@ -17,7 +17,7 @@ public class waitScreen extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot you. You die.");
+    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot. You die.");
     add(content);
     
     JButton cont = new JButton("Continue");

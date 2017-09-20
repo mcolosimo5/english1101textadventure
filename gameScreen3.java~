@@ -2,23 +2,31 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class waitScreen extends JFrame implements ActionListener {
+public class gameScreen3 extends JFrame {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new waitScreen().setVisible(true);
+    new gameScreen3().setVisible(true);
   }
   
-  public waitScreen() {
+  public gameScreen3() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot. You die.");
-    add(content);
+    
+    JLabel contentGameScreen = new JLabel("As you wander toward the lively tavern to have a well deserved pint, you hear the old-gatekeeper frantically ringing the alarm bell..");
+    add(contentGameScreen);
+    
+    JLabel contentGameScreen2 = new JLabel("Nimble bandits swarm over the walls and into the town.");
+    add(contentGameScreen2);
+
+    JLabel contentGameScreen2 = new JLabel("What do you do?");
+    add(contentGameScreen2);
+    
     
     JButton cont = new JButton("Continue");
     cont.addActionListener(this);
@@ -33,12 +41,9 @@ public class waitScreen extends JFrame implements ActionListener {
     
     if (a.equals("Continue"))
           {
+      gameScreen2.sword = false;
       new deathScreen().setVisible(true);
     }
    }
 }
-  
-  
-      
- 
   
