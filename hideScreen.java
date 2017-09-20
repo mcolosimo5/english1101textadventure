@@ -35,10 +35,6 @@ public class hideScreen extends JFrame  {
       String name;
       boolean containsQ = false;
       name = nameTextField.getText();
-      if (name.length() < 15)
-      {
-        new waitScreen().setVisible(true);
-      }
       for (int i = 0; i < name.length(); i++)
       {
         if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
@@ -46,11 +42,16 @@ public class hideScreen extends JFrame  {
           containsQ = true;
         }
       }
-      if (containsQ == false)
+      if (name.length() < 15)
       {
         new waitScreen().setVisible(true);
       }
-      if (containsQ == true && name.length() > 14)
+      
+      else if (containsQ == false)
+      {
+        new waitScreen().setVisible(true);
+      }
+      else if (containsQ == true && name.length() > 14)
       {
         new gameScreen2().setVisible(true);
       }

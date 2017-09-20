@@ -13,7 +13,7 @@ public class gameScreen2 extends JFrame implements ActionListener  {
   
   public gameScreen2() {
     super("Play Game");
-    setSize(600, 600);
+    setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
