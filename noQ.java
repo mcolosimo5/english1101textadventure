@@ -39,11 +39,11 @@ public class noQ extends JFrame implements ActionListener {
     
     if (a.equals("Wait for the Gatekeeper"))
           {
-      new gameScreen().setVisible(true);
+      new waitScreen().setVisible(true);
     }
     else if (a.equals("Hide Quickly and Quietly"))
     {
-      new gameScreen().setVisible(true);
+      new hideScreen().setVisible(true);
     }
    }
 }

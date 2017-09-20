@@ -2,27 +2,30 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class gameScreen extends JFrame {
+public class hideScreen extends JFrame  {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new gameScreen().setVisible(true);
+    new hideScreen().setVisible(true);
   }
   
-  public gameScreen() {
+  public hideScreen() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
     
-    JLabel contentGameScreen = new JLabel("After what seems like an eternity of wandering, you arrive at a small, unimpressive town.");
+    JLabel contentGameScreen = new JLabel("You Quickly hide under a Quilt and eat some Quail");
     add(contentGameScreen);
     
-    JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name… What do you tell him?");
+    JLabel contentGameScreen2 = new JLabel("The gatekeeper seems impressed with your commitment to the letter Q");
     add(contentGameScreen2);
+    
+    JLabel contentGameScreen3 = new JLabel("He decides to give you one more chance to tell him your name. You tell him...");
+    add(contentGameScreen3);
     
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);
@@ -32,6 +35,10 @@ public class gameScreen extends JFrame {
       String name;
       boolean containsQ = false;
       name = nameTextField.getText();
+      if (name.length() < 15)
+      {
+        new waitScreen().setVisible(true);
+      }
       for (int i = 0; i < name.length(); i++)
       {
         if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
@@ -39,14 +46,9 @@ public class gameScreen extends JFrame {
           containsQ = true;
         }
       }
-      if (name.length() < 15)
-      {
-        new nameTooShortScreen().setVisible(true);
-      }
-      
       if (containsQ == false)
       {
-        new noQ().setVisible(true);
+        new waitScreen().setVisible(true);
       }
       if (containsQ == true && name.length() > 14)
       {
@@ -57,7 +59,5 @@ public class gameScreen extends JFrame {
     );
     add(submit);
     
-  }
-  
- 
-    }
+}
+}

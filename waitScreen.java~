@@ -2,22 +2,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class nameTooShortScreen extends JFrame implements ActionListener {
+public class waitScreen extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new nameTooShortScreen().setVisible(true);
+    new waitScreen().setVisible(true);
   }
   
-  public nameTooShortScreen() {
+  public waitScreen() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The gatekeeper thinks that you are lying about your name. He proceeds to pull out a club and beat you to death.");
+    JLabel content = new JLabel("The gatekeeper becomes impatient and yells to his archers to shoot you. You die.");
     add(content);
     
     JButton cont = new JButton("Continue");
