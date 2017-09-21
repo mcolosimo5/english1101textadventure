@@ -17,13 +17,13 @@ public class mountain extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You arrive at the mountain and start to climb");
+    JLabel content = new JLabel("You arrive at the mountain and start to climb.");
     add(content);
     
-    JLabel content2 = new JLabel("As you climb the mountain, you slip on a loose rock and cause a landslide,");
+    JLabel content2 = new JLabel("As you climb the mountain, you slip on a loose rock and cause a landslide.");
     add(content2);
     
-    JLabel content3 = new JLabel("which buries both you and the bandit under miles of earth. You die.");
+    JLabel content3 = new JLabel("You and the bandits are buried under miles of earth. You die.");
     add(content3);
     
     JButton cont = new JButton("Continue");

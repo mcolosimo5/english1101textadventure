@@ -29,13 +29,26 @@ public class attackHide extends JFrame implements ActionListener {
     JLabel content4 = new JLabel("They tell you that you must go and find the bandits that ran off with all the treasure.");
     add(content4);
     
-    JLabel content5 = new JLabel("You leave the town through the gate and see bandits running in all directions - to the mountains, the swamp, the lake, and the cave.");
+    JLabel content5 = new JLabel("You leave the town through the gate and see bandits running in all directions");
     add(content5);
     
-    JButton cont = new JButton("Continue");
-    cont.addActionListener(this);
-    add(cont);
+    JLabel content6 = new JLabel("- to the mountains, the swamp, the lake, and the cave.");
+    add(content6);
     
+    JLabel content7 = new JLabel("Where do you go?");
+    add(content7);
+    
+    JButton mountains = new JButton("The Mountains");
+    mountains.addActionListener(this);
+    add(mountains);
+    
+    JButton swamp = new JButton("The Swamp");
+    swamp.addActionListener(this);
+    add(swamp);
+    
+    JButton cave = new JButton("The Cave");
+    cave.addActionListener(this);
+    add(cave);
     
    }
   
@@ -43,10 +56,17 @@ public class attackHide extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Continue"))
+    if (a.equals("The Mountains"))
           {
-      gameScreen2.sword = false;
-      new deathScreen().setVisible(true);
+      new mountain().setVisible(true);
+    }
+    if (a.equals("The Swamp"))
+          {
+      new swamp().setVisible(true);
+    }
+    if (a.equals("The Cave"))
+          {
+      new cave().setVisible(true);
     }
    }
 }

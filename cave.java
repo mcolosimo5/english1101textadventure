@@ -19,13 +19,13 @@ public class cave extends JFrame implements ActionListener {
     
     if (gameScreen2.sword == true)
     {
-    JLabel content = new JLabel("It is dark in the cave, you can’t see anything. If only you had a torch or something..");
+    JLabel content = new JLabel("It is dark in the cave, you can’t see anything. If only you had a torch or something...");
     add(content);
     
     JLabel content2 = new JLabel("You hear footsteps all around you.");
     add(content2);
     
-    JLabel content3 = new JLabel("A dagger pierces your side, and the bandits mercilessly shank you to death.");
+    JLabel content3 = new JLabel("A dagger pierces your side, and the bandits mercilessly stab you to death.");
     add(content3);
     }
     else

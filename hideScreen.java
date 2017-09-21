@@ -42,16 +42,16 @@ public class hideScreen extends JFrame  {
           containsQ = true;
         }
       }
-      if (name.length() < 15)
+      if (name.length() < 12)
       {
-        new waitScreen().setVisible(true);
+        new nameTooShortScreen().setVisible(true);
       }
       
       else if (containsQ == false)
       {
         new waitScreen().setVisible(true);
       }
-      else if (containsQ == true && name.length() > 14)
+      else if (containsQ == true && name.length() >= 12)
       {
         new gameScreen2().setVisible(true);
       }

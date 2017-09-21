@@ -17,7 +17,7 @@ public class attackHide extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You decide to hide and play it safe");
+    JLabel content = new JLabel("You decide to hide and play it safe.");
     add(content);
     
     JLabel content2 = new JLabel("After a few hours you hear the fighting die down, and you come out of your hiding place.");
@@ -26,13 +26,13 @@ public class attackHide extends JFrame implements ActionListener {
     JLabel content3 = new JLabel("The town’s people are angry that you did not fight.");
     add(content3);
     
-    JLabel content4 = new JLabel("They tell you that you must go and find the bandits that ran off with all the treasure.");
+    JLabel content4 = new JLabel("They tell you that the bandits stole their treasure, and you must go retrieve it.");
     add(content4);
     
-    JLabel content5 = new JLabel("You leave the town through the gate and see bandits running in all directions");
+    JLabel content5 = new JLabel("You leave the town through the gate and see bandits running in all directions.");
     add(content5);
     
-    JLabel content6 = new JLabel("- to the mountains, the swamp, the lake, and the cave.");
+    JLabel content6 = new JLabel("Some of them are running to the mountains, some to the swamp, and others to the cave.");
     add(content6);
     
     JLabel content7 = new JLabel("Where do you go?");

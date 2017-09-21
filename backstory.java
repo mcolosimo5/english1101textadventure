@@ -19,15 +19,18 @@ public class backstory extends JFrame implements ActionListener {
     
     JLabel content = new JLabel("You wake up under an old oak tree in a spacious forest.");
     add(content);
+    
+    JLabel content4 = new JLabel("You're lying on the ground, and your clothes are tattered and dirty.");
+    add(content4);
        
-    JLabel content2 = new JLabel("A small creak is trickling past about 30 feet to the left of you.");
+    JLabel content2 = new JLabel("There is a small creak to your left. You get up and walk towards the stream.");
     add(content2);
    
-    JLabel content4 = new JLabel("You get up and see that your clothes are tattered and dirty.");
-    add(content4);
-    
-    JLabel content5 = new JLabel("You walk along the stream for about a while, and then find a small dirt path and start to walk southeast along the path.");
+    JLabel content5 = new JLabel("You walk along the stream towards the east for a while, and then find a small dirt path.");
     add(content5);
+    
+    JLabel content6 = new JLabel("You start to walk southeast along the path.");
+    add(content6);
     
     JButton cont = new JButton("Continue");
     cont.addActionListener(this);

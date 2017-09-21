@@ -39,7 +39,7 @@ public class gameScreen extends JFrame {
           containsQ = true;
         }
       }
-      if (name.length() < 15)
+      if (name.length() <= 12)
       {
         new nameTooShortScreen().setVisible(true);
       }
@@ -48,7 +48,7 @@ public class gameScreen extends JFrame {
       {
         new noQ().setVisible(true);
       }
-      else if (containsQ == true && name.length() > 14)
+      else if (containsQ == true && name.length() >= 12)
       {
         new gameScreen2().setVisible(true);
       }

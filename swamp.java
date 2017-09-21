@@ -17,10 +17,10 @@ public class swamp extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You chase the bandit into the swamp.");
+    JLabel content = new JLabel("You chase the bandits into the swamp.");
     add(content);
     
-    JLabel content2 = new JLabel("As you chase the bandit through the swamp, your foot gets stuck in the mud.");
+    JLabel content2 = new JLabel("As you chase them through the swamp, your foot gets stuck in the mud.");
     add(content2);
     
     JLabel content3 = new JLabel("You can’t move. You starve to death.");

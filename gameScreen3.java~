@@ -17,9 +17,16 @@ public class gameScreen3 extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    
-    JLabel contentGameScreen = new JLabel("As you wander toward the lively tavern to have a well deserved pint,");
+    if (gameScreen2.sword == true)
+    {
+    JLabel contentGameScreen = new JLabel("As you wander out of the blacksmith's hut toward the lively tavern to have a well deserved pint,");
     add(contentGameScreen);
+    }
+    else
+    {
+    JLabel contentGameScreen = new JLabel("As you wander out of the temple toward the lively tavern to have a well deserved pint,");
+    add(contentGameScreen);
+    }
     
     JLabel contentGameScreen4 = new JLabel("you hear the old-gatekeeper frantically ringing the alarm bell..");
     add(contentGameScreen4);

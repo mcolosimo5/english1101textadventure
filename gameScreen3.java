@@ -28,7 +28,7 @@ public class gameScreen3 extends JFrame implements ActionListener {
     add(contentGameScreen);
     }
     
-    JLabel contentGameScreen4 = new JLabel("you hear the old-gatekeeper frantically ringing the alarm bell..");
+    JLabel contentGameScreen4 = new JLabel("you hear the old gatekeeper frantically ringing the alarm bell..");
     add(contentGameScreen4);
     
     JLabel contentGameScreen2 = new JLabel("Nimble bandits swarm over the walls and into the town.");

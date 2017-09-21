@@ -2,28 +2,28 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class mountain extends JFrame implements ActionListener {
+public class swamp extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new mountain().setVisible(true);
+    new swamp().setVisible(true);
   }
   
-  public mountain() {
+  public swamp() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You arrive at the mountain and start to climb");
+    JLabel content = new JLabel("You chase the bandit into the swamp.");
     add(content);
     
-    JLabel content2 = new JLabel("As you climb the mountain, you slip on a loose rock and cause a landslide,");
+    JLabel content2 = new JLabel("As you chase the bandit through the swamp, your foot gets stuck in the mud.");
     add(content2);
     
-    JLabel content3 = new JLabel("which buries both you and the bandit under miles of earth. You die.");
+    JLabel content3 = new JLabel("You can’t move. You starve to death.");
     add(content3);
     
     JButton cont = new JButton("Continue");

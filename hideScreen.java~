@@ -2,13 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class hideScreen extends JFrame implements ActionListener  {
+public class hideScreen extends JFrame  {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new hideScreenn().setVisible(true);
+    new hideScreen().setVisible(true);
   }
   
   public hideScreen() {
@@ -24,33 +24,41 @@ public class hideScreen extends JFrame implements ActionListener  {
     JLabel contentGameScreen2 = new JLabel("The gatekeeper seems impressed with your commitment to the letter Q");
     add(contentGameScreen2);
     
-    JLabel contentGameScreen2 = new JLabel("He decides to give you one more chance to tell him your name");
-    add(contentGameScreen2);
+    JLabel contentGameScreen3 = new JLabel("He decides to give you one more chance to tell him your name. You tell him...");
+    add(contentGameScreen3);
     
-    JButton goLeft = new JButton ("Go to the Left");
-    goLeft.addActionListener(this);
+    final JTextField nameTextField = new JTextField(20);
+    add(nameTextField);
     
-    JButton goRight = new JButton ("Go to the Right");
-    goRight.addActionListener(this);
-    
-    add(goRight);
-    add(goLeft);
-    
-  }
-  
-  @Override 
-  public void actionPerformed (ActionEvent e) {
-    String a = e.getActionCommand();
-    
-    if (a.equals("Go to the Left"))
-          {
-      new gameScreen().setVisible(true);
-    }
-    else if (a.equals("Go to the Right"))
-          {
+    JButton submit = new JButton("Submit");
+    submit.addActionListener(new ActionListener () {public void actionPerformed (ActionEvent ae){
+      String name;
+      boolean containsQ = false;
+      name = nameTextField.getText();
+      for (int i = 0; i < name.length(); i++)
+      {
+        if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
+        {
+          containsQ = true;
+        }
+      }
+      if (name.length() < 15)
+      {
+        new waitScreen().setVisible(true);
+      }
       
+      else if (containsQ == false)
+      {
+        new waitScreen().setVisible(true);
+      }
+      else if (containsQ == true && name.length() > 14)
+      {
+        new gameScreen2().setVisible(true);
+      }
     }
-     
+    }
+    );
+    add(submit);
     
-  }
+}
 }
