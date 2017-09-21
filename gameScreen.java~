@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class gameScreen extends JFrame implements ActionListener {
+public class gameScreen extends JFrame {
   
   private static final long serialVersionUID = 1L;
   
@@ -24,25 +24,40 @@ public class gameScreen extends JFrame implements ActionListener {
     JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name… What do you tell him?");
     add(contentGameScreen2);
     
-    JTextField name1 = new JTextField(20);
-    add(name1);
+    final JTextField nameTextField = new JTextField(20);
+    add(nameTextField);
     
     JButton submit = new JButton("Submit");
-    submit.addActionListener(this);
+    submit.addActionListener(new ActionListener () {public void actionPerformed (ActionEvent ae){
+      String name;
+      boolean containsQ = false;
+      name = nameTextField.getText();
+      for (int i = 0; i < name.length(); i++)
+      {
+        if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
+        {
+          containsQ = true;
+        }
+      }
+      if (name.length() < 15)
+      {
+        new nameTooShortScreen().setVisible(true);
+      }
+      
+      else if (containsQ == false)
+      {
+        new noQ().setVisible(true);
+      }
+      else if (containsQ == true && name.length() > 14)
+      {
+        new gameScreen2().setVisible(true);
+      }
+    }
+    }
+    );
     add(submit);
     
   }
   
-  @Override 
-  public void actionPerformed (ActionEvent e) {
-    String a = e.getActionCommand();
-    
-    if (a.equals("Submit"))
-          {
+ 
     }
-    else if (a.equals("Go to the Right"))
-          {
-      
-    }
-}
-}
