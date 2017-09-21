@@ -18,7 +18,7 @@ public class deathScreen extends JFrame implements ActionListener  {
     setLayout(new FlowLayout());
     
     
-    JLabel contentGameScreen = new JLabel("You chose the wrong option and died");
+    JLabel contentGameScreen = new JLabel("You chose the wrong option and died.");
     add(contentGameScreen);
     
     JLabel contentGameScreen2 = new JLabel("Would you like to try again?");

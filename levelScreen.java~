@@ -13,18 +13,22 @@ public class levelScreen extends JFrame implements ActionListener  {
   
   public levelScreen() {
     super("Play Game");
-    setSize(600, 600);
+    setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
     JButton level1 = new JButton ("Level 1");
-    goLeft.addActionListener(this);
+    level1.addActionListener(this);
     
     JButton level2 = new JButton ("Level 2");
-    goRight.addActionListener(this);
+    level2.addActionListener(this);
     
-    add(goRight);
-    add(goLeft);
+    JButton level3 = new JButton ("Level 3");
+    level3.addActionListener(this);
+    
+    add(level1);
+    add(level2);
+    add(level3);
     
   }
   
@@ -32,15 +36,16 @@ public class levelScreen extends JFrame implements ActionListener  {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Go to the Left"))
+    if (a.equals("Level 1"))
           {
       new gameScreen().setVisible(true);
     }
-    else if (a.equals("Go to the Right"))
+    else if (a.equals("Level 2"))
           {
-      
+      new gameScreen2().setVisible(true);
     }
-     
-    
+    else if(a.equals("Level 3") );
+              {
+    }
   }
 }
