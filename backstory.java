@@ -23,7 +23,7 @@ public class backstory extends JFrame implements ActionListener {
     JLabel content4 = new JLabel("You're lying on the ground, and your clothes are tattered and dirty.");
     add(content4);
        
-    JLabel content2 = new JLabel("There is a small creak to your left. You get up and walk towards the stream.");
+    JLabel content2 = new JLabel("There is a small creek to your left. You get up and walk towards the stream.");
     add(content2);
    
     JLabel content5 = new JLabel("You walk along the stream towards the east for a while, and then find a small dirt path.");
