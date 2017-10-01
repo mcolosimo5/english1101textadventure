@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class gameScreen2 extends JFrame implements ActionListener  {
   
   private static final long serialVersionUID = 1L;
+  public static boolean sword = true;
   
   public static void main (String args [])
   {
@@ -30,17 +31,17 @@ public class gameScreen2 extends JFrame implements ActionListener  {
     JLabel contentGameScreen4 = new JLabel("The rest of the town seems to be built around a temple to some unknown diety populated by friendly-looking monks.");
     add(contentGameScreen4);
     
-    JLabel contentGameScreen5 = new JLabel("The old man pushes you toward in the direction of those two alluring buildings.To which to do you go?      ");
+    JLabel contentGameScreen5 = new JLabel("The old man pushes you toward in the direction of those two alluring buildings.To which to do you go?           ");
     add(contentGameScreen5);
     
-    JButton goLeft = new JButton ("The Temple");
-    goLeft.addActionListener(this);
+    JButton temple = new JButton ("The Temple");
+    temple.addActionListener(this);
     
-    JButton goRight = new JButton ("The Blacksmith's Hut");
-    goRight.addActionListener(this);
+    JButton blacksmith = new JButton ("The Blacksmith's Hut");
+    blacksmith.addActionListener(this);
     
-    add(goRight);
-    add(goLeft);
+    add(temple);
+    add(blacksmith);
     
   }
   
@@ -48,12 +49,13 @@ public class gameScreen2 extends JFrame implements ActionListener  {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Go to the Left"))
+    if (a.equals("The Blacksmith's Hut"))
           {
-      new gameScreen().setVisible(true);
+      new blacksmith().setVisible(true);
     }
-    else if (a.equals("Go to the Right"))
+    else if (a.equals("The Temple"))
           {
+      new temple().setVisible(true);
       
     }
      

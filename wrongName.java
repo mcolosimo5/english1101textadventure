@@ -2,29 +2,37 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class mountain extends JFrame implements ActionListener {
+public class wrongName extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new mountain().setVisible(true);
+    new wrongName().setVisible(true);
   }
   
-  public mountain() {
+  public wrongName() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You arrive at the mountain and start to climb.");
+    if (gameScreen2.sword == false && blacksmith.bow == false)
+    {
+    JLabel content = new JLabel("The priest believes you are lying about your name.");
     add(content);
     
-    JLabel content2 = new JLabel("As you climb the mountain, you slip on a loose rock and cause a landslide.");
+    JLabel content2 = new JLabel("He yells for the guards who quickly come and kill you.");
     add(content2);
+    }
+    else
+    {
+    JLabel content = new JLabel("The blacksmith believes you are lying about your name.");
+    add(content);
     
-    JLabel content3 = new JLabel("You and the bandits are buried under miles of earth. You die.");
-    add(content3);
+    JLabel content2 = new JLabel("He pulls out a sword and kills you.");
+    add(content2);
+    }
     
     JButton cont = new JButton("Continue");
     cont.addActionListener(this);

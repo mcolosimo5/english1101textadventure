@@ -17,7 +17,7 @@ public class blacksmith extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You enter the blacksmith shop. A gruff locking man asks What do you want?");
+    JLabel content = new JLabel("You enter the blacksmith's shop. A gruff locking man asks What do you want?");
     add(content);
     
     JLabel content2 = new JLabel("                              You are nervous, and say nothing. The man laughs and hands you a sword.                               ");

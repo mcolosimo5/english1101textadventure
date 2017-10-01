@@ -18,7 +18,7 @@ public class gameScreen extends JFrame {
     setLayout(new FlowLayout());
     
     
-    JLabel contentGameScreen = new JLabel("After what seems like an eternity of wandering, you arrive at a small, unimpressive town.");
+    JLabel contentGameScreen = new JLabel("After what seems like an eternity of walking, you arrive at a small, unimpressive town.");
     add(contentGameScreen);
     
     JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name… What do you tell him?");
@@ -39,7 +39,7 @@ public class gameScreen extends JFrame {
           containsQ = true;
         }
       }
-      if (name.length() <= 12)
+      if (name.length() < 12)
       {
         new nameTooShortScreen().setVisible(true);
       }

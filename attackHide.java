@@ -23,7 +23,7 @@ public class attackHide extends JFrame implements ActionListener {
     JLabel content2 = new JLabel("After a few hours you hear the fighting die down, and you come out of your hiding place.");
     add(content2);
     
-    JLabel content3 = new JLabel("The town’s people are angry that you did not fight.");
+    JLabel content3 = new JLabel("The town's people are angry that you did not fight.");
     add(content3);
     
     JLabel content4 = new JLabel("They tell you that the bandits stole their treasure, and you must go retrieve it.");

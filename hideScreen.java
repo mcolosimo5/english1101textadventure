@@ -53,6 +53,7 @@ public class hideScreen extends JFrame  {
       }
       else if (containsQ == true && name.length() >= 12)
       {
+        gameScreen.nameGood = name;
         new gameScreen2().setVisible(true);
       }
     }
