@@ -19,7 +19,7 @@ public class blacksmith2 extends JFrame {
     
     if (blacksmith.bow == true)
     {
-    JLabel content = new JLabel("Before handing you your bow, the blacksmith asks you for your name.You tell him...");
+    JLabel content = new JLabel("Before handing you your bow, the blacksmith asks you for your name. You tell him...");
     add(content);
     }
     else{
@@ -42,10 +42,11 @@ public class blacksmith2 extends JFrame {
       {
         new wrongName().setVisible(true); 
       } 
-    add(submit);
+    
     }
     }
                              );
+    add(submit);
                              }
 }
                              

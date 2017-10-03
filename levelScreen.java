@@ -42,7 +42,7 @@ public class levelScreen extends JFrame implements ActionListener  {
     }
     else if (a.equals("Level 2"))
           {
-      new gameScreen2().setVisible(true);
+      new backstory2().setVisible(true);
     }
     else if(a.equals("Level 3") );
               {

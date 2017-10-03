@@ -20,8 +20,11 @@ public class temple extends JFrame {
     JLabel content = new JLabel("You enter the temple. The priest offers you a glowing stick and says 'It has magical abilities, use it well.'");
     add(content);
     
-    JLabel content1 = new JLabel("Before giving it to you, he asks you for your name. You tell him...");
+    JLabel content1 = new JLabel("Before you may use any of its powers, you must agree to use it to protect the innocent, uphold justice,");                               
     add(content1);
+    
+    JLabel content2 = new JLabel(" and spreald light to dark places where only evil lies. He pulls out a contract and tells you to sign...");
+    add(content2);
     
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);

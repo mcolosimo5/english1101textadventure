@@ -27,7 +27,7 @@ public class blacksmith extends JFrame implements ActionListener {
     JLabel content3 = new JLabel("The bow is light and versatile.");
     add(content3);
     
-    JLabel content4 = new JLabel("The sword is heavy and sturdy.");
+    JLabel content4 = new JLabel("The sword is made of dwarvish metals mined from the mountains. It is strong and sturdy.");
     add(content4);
    
     JButton sword = new JButton("Sword");

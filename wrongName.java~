@@ -17,12 +17,12 @@ public class wrongName extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    if (gameScreen2.sword == true)
+    if (gameScreen2.sword == false && blacksmith.bow == false)
     {
     JLabel content = new JLabel("The priest believes you are lying about your name.");
     add(content);
     
-    JLabel content2 = new JLabel("He yells for the gaurds who quickly come and kill you.");
+    JLabel content2 = new JLabel("He yells for the guards who quickly come and kill you.");
     add(content2);
     }
     else
@@ -43,8 +43,6 @@ public class wrongName extends JFrame implements ActionListener {
   
    @Override 
   public void actionPerformed (ActionEvent e) {
-    String a = e.getActionCommand();
-    
     String a = e.getActionCommand();
     
     if (a.equals("Continue"))
