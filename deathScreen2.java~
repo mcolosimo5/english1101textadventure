@@ -2,16 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class deathScreen extends JFrame implements ActionListener  {
+public class deathScreen2 extends JFrame implements ActionListener  {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new deathScreen().setVisible(true);
+    new deathScreen2().setVisible(true);
   }
   
-  public deathScreen() {
+  public deathScreen2() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -39,13 +39,10 @@ public class deathScreen extends JFrame implements ActionListener  {
     
     if (a.equals("Yes"))
           {
-      new backstory().setVisible(true);
+      new backstory2().setVisible(true);
     }
      
     else if (a.equals("No"))
-    {
-      new levelScreen().setVisible(true);
-    }
     {
 
     }

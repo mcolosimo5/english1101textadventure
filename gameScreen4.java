@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class gameScreen4 extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
+  public static String weapon = "";
   
   public static void main (String args [])
   {
@@ -24,9 +25,9 @@ public class gameScreen4 extends JFrame implements ActionListener {
     sword.addActionListener(this);
     add(sword);
       
-    JButton bow = new JButton("A Bow and Arrow");
-    bow.addActionListener(this);
-    add(bow);
+    JButton axe = new JButton("A Bronze Axe");
+    axe.addActionListener(this);
+    add(axe);
     
     JButton torch = new JButton("A Torch");
     torch.addActionListener(this);
@@ -40,15 +41,18 @@ public class gameScreen4 extends JFrame implements ActionListener {
     
     if (a.equals("A Silver Sword"))
           {
-      new killedByVillagers().setVisible(true);
+      weapon = "sword";
+      new whereTo().setVisible(true);
     }
-    else if(a.equals("A Bow and Arrow"))
+    else if(a.equals("A Bronze Axe"))
       {
-      new gameScreen().setVisible(true);
+      weapon = "axe";
+      new whereTo().setVisible(true);
     }
     else if(a.equals("A Torch"))
       {
-      new gameScreen().setVisible(true);
+      weapon = "torch";
+      new whereTo().setVisible(true);
     }
    }
 }

@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class gameScreen4 extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
+  public static String weapon = "";
   
   public static void main (String args [])
   {
@@ -20,16 +21,17 @@ public class gameScreen4 extends JFrame implements ActionListener {
     JLabel content = new JLabel("You must prepare to search for the killer. You go to the armory to get a weapon.");
     add(content);
     
-    JLabel content4 = new JLabel("A Silver Sword");
-    add(content4);
+    JButton sword = new JButton("A Silver Sword");
+    sword.addActionListener(this);
+    add(sword);
       
-    JButton wait = new JButton("A Bow and Arrow");
-    wait.addActionListener(this);
-    add(wait);
+    JButton bow = new JButton("A Bow and Arrow");
+    bow.addActionListener(this);
+    add(bow);
     
-    JButton help = new JButton("A Torch");
-    help.addActionListener(this);
-    add(help);
+    JButton torch = new JButton("A Torch");
+    torch.addActionListener(this);
+    add(torch);
     
    }
   
@@ -39,14 +41,17 @@ public class gameScreen4 extends JFrame implements ActionListener {
     
     if (a.equals("A Silver Sword"))
           {
+      weapon = "sword";
       new killedByVillagers().setVisible(true);
     }
     else if(a.equals("A Bow and Arrow"))
       {
+      weapon = "bow";
       new gameScreen().setVisible(true);
     }
     else if(a.equals("A Torch"))
       {
+      weapon = "torch";
       new gameScreen().setVisible(true);
     }
    }

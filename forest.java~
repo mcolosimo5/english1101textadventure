@@ -1,0 +1,64 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class forest extends JFrame {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new forest().setVisible(true);
+  }
+  
+  public forest() {
+    super("Play Game");
+    setSize(800, 700);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    
+    JLabel contentGameScreen = new JLabel("You arrive at the forest. What is your next course of action?");
+    add(contentGameScreen);
+    
+    JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name. What do you tell him?");
+    add(contentGameScreen2);
+    
+    final JTextField nameTextField = new JTextField(20);
+    add(nameTextField);
+    
+    JButton submit = new JButton("Submit");
+    submit.addActionListener(new ActionListener () {public void actionPerformed (ActionEvent ae){
+      String name;
+      boolean containsQ = false;
+      name = (nameTextField.getText()).toLowerCase;
+      for (int i = 0; i < name.length(); i++)
+      {
+        if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
+        {
+          containsQ = true;
+        }
+      }
+      if (name.length() < 12)
+      {
+        new nameTooShortScreen().setVisible(true);
+      }
+      
+      else if (containsQ == false)
+      {
+        new noQ().setVisible(true);
+      }
+      else if (containsQ == true && name.length() >= 12)
+      {
+        nameGood = nameTextField.getText();
+        new gameScreen2().setVisible(true);
+      }
+    }
+    }
+    );
+    add(submit);
+    
+  }
+  
+ 
+    }
