@@ -16,6 +16,8 @@ public class attackWerewolf extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
     if (gameScreen4.weapon.equals("axe"))
     {
@@ -66,7 +68,7 @@ public class attackWerewolf extends JFrame implements ActionListener {
           {
       new deathScreen2().setVisible(true);
     }
-     if (a.equals("Continue") && gameScreen2.sword == false && blacksmith.bow == false)
+     if (a.equals("Continue") && (gameScreen4.weapon.equals("sword")))
      {
        new victory().setVisible(true);
      }

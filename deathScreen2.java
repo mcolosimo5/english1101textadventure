@@ -17,6 +17,8 @@ public class deathScreen2 extends JFrame implements ActionListener  {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
     
     JLabel contentGameScreen = new JLabel("You chose the wrong option and died.");

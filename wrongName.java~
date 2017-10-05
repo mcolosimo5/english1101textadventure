@@ -19,10 +19,10 @@ public class wrongName extends JFrame implements ActionListener {
     
     if (gameScreen2.sword == false && blacksmith.bow == false)
     {
-    JLabel content = new JLabel("The priest believes you are lying about your name.");
+    JLabel content = new JLabel("You have signed another's name. You are not worthy of the Elder's Staff");
     add(content);
     
-    JLabel content2 = new JLabel("He yells for the guards who quickly come and kill you.");
+    JLabel content2 = new JLabel("You die.");
     add(content2);
     }
     else

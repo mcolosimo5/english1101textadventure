@@ -16,6 +16,8 @@ public class oldManForest2 extends JFrame  {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
     
     JLabel content = new JLabel("The man Questions your name.");
@@ -47,16 +49,16 @@ public class oldManForest2 extends JFrame  {
       }
       if (name.length() < 12)
       {
-        new nameTooShortScreen().setVisible(true);
+        new oldManForestDeath().setVisible(true);
       }
       
       else if (containsQ == false)
       {
-        new waitScreen().setVisible(true);
+        new oldManForestDeath().setVisible(true);
       }
       else if (containsQ == true && name.length() >= 12)
       {
-        new oldManForestDeath().setVisible(true);
+        new investigation().setVisible(true);
       }
     }
     }

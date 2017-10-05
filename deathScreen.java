@@ -17,13 +17,19 @@ public class deathScreen extends JFrame implements ActionListener  {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     
-    JLabel contentGameScreen = new JLabel("You chose the wrong option and died.");
-    add(contentGameScreen);
+    JLabel content = new JLabel("You chose the wrong option and died.");
+    add(content);
     
-    JLabel contentGameScreen2 = new JLabel("Would you like to try again?");
-    add(contentGameScreen2);
+    JLabel content2 = new JLabel("Would you like to try again?");
+    add(content2);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     
     JButton yes = new JButton("Yes");
     yes.addActionListener(this);

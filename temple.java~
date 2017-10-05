@@ -23,7 +23,7 @@ public class temple extends JFrame {
     JLabel content1 = new JLabel("Before you may use any of its powers, you must agree to use it to protect the innocent, uphold justice,");                               
     add(content1);
     
-    JLabel content2 = new JLabel(" and spreald light to dark places where only evil lies. He pulls out a contract and tells you to sign...");
+    JLabel content2 = new JLabel(" and spread light to dark places where only evil lies. He pulls out a contract and tells you to sign...");
     add(content2);
     
     final JTextField nameTextField = new JTextField(20);

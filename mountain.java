@@ -16,6 +16,9 @@ public class mountain extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     if(gameScreen2.sword == true)
     {
@@ -30,6 +33,11 @@ public class mountain extends JFrame implements ActionListener {
       
       JLabel content7 = new JLabel("You retrieve the treasure and return it to the townspeople. You are a hero!");
       add(content7);
+      
+      content4.setForeground(Color.WHITE);
+      content5.setForeground(Color.WHITE);
+      content6.setForeground(Color.WHITE);
+      content7.setForeground(Color.WHITE);
     }
     
     else
@@ -43,6 +51,11 @@ public class mountain extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("You and the bandits are buried under miles of earth. You die.");
     add(content3);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    
     }
     
     JButton cont = new JButton("Continue");

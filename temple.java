@@ -16,6 +16,9 @@ public class temple extends JFrame {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     JLabel content = new JLabel("You enter the temple. The priest offers you a glowing stick and says 'It has magical abilities, use it well.'");
     add(content);
@@ -25,6 +28,10 @@ public class temple extends JFrame {
     
     JLabel content2 = new JLabel(" and spread light to dark places where only evil lies. He pulls out a contract and tells you to sign...");
     add(content2);
+    
+    content.setForeground(Color.WHITE);
+    content1.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);

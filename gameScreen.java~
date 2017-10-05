@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class gameScreen extends JFrame {
   
   private static final long serialVersionUID = 1L;
+  public static String nameGood;
   
   public static void main (String args [])
   {
@@ -21,7 +22,7 @@ public class gameScreen extends JFrame {
     JLabel contentGameScreen = new JLabel("After what seems like an eternity of walking, you arrive at a small, unimpressive town.");
     add(contentGameScreen);
     
-    JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your nameÉ What do you tell him?");
+    JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name. What do you tell him?");
     add(contentGameScreen2);
     
     final JTextField nameTextField = new JTextField(20);
@@ -50,6 +51,7 @@ public class gameScreen extends JFrame {
       }
       else if (containsQ == true && name.length() >= 12)
       {
+        nameGood = nameTextField.getText();
         new gameScreen2().setVisible(true);
       }
     }

@@ -22,7 +22,7 @@ public class blacksmith2 extends JFrame {
     JLabel content = new JLabel("Before handing you your bow, the blacksmith tells you that you must must share the food that you hunt in the woods ");
     add(content);
     
-    JLabel content2 = new JLabel("with the villagers. He pulls out a comntract for you to sign...");
+    JLabel content2 = new JLabel("with the villagers. He pulls out a contract for you to sign...");
     add(content2);
     }
     else{

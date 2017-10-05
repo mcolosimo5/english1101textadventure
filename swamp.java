@@ -16,6 +16,9 @@ public class swamp extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     if (gameScreen2.sword == true)
     {
@@ -27,6 +30,11 @@ public class swamp extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("You cannot move. You starve to death.");
     add(content3);
+    
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    content.setForeground(Color.WHITE);
+    
     }
     else if (blacksmith.bow == true)
     {
@@ -35,6 +43,9 @@ public class swamp extends JFrame implements ActionListener {
       
       JLabel content5 = new JLabel("You retrieve the treasure and return it to the townspeople. You are a hero!");
       add(content5);
+      
+      content4.setForeground(Color.WHITE);
+      content5.setForeground(Color.WHITE);
     }
     else
     {
@@ -46,6 +57,10 @@ public class swamp extends JFrame implements ActionListener {
     
     JLabel content8 = new JLabel("You cannot move. You starve to death.");
     add(content8);
+    
+    content7.setForeground(Color.WHITE);
+    content8.setForeground(Color.WHITE);
+    content6.setForeground(Color.WHITE);
     }
     
     JButton cont = new JButton("Continue");

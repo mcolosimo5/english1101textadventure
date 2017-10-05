@@ -55,7 +55,7 @@ public class backstory2 extends JFrame implements ActionListener {
     }
     else if(a.equals("Assist in the Investigation"))
       {
-      new gameScreen().setVisible(true);
+      new gameScreen4().setVisible(true);
     }
    }
 }

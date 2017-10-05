@@ -16,6 +16,8 @@ public class killedByVillagers extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
     JLabel content = new JLabel("The villagers are upset that you will not help them. They call you a traitor.");
     add(content);

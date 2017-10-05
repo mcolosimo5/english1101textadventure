@@ -25,9 +25,9 @@ public class gameScreen4 extends JFrame implements ActionListener {
     sword.addActionListener(this);
     add(sword);
       
-    JButton bow = new JButton("A Bow and Arrow");
-    bow.addActionListener(this);
-    add(bow);
+    JButton axe = new JButton("A Bronze Axe");
+    axe.addActionListener(this);
+    add(axe);
     
     JButton torch = new JButton("A Torch");
     torch.addActionListener(this);
@@ -42,17 +42,17 @@ public class gameScreen4 extends JFrame implements ActionListener {
     if (a.equals("A Silver Sword"))
           {
       weapon = "sword";
-      new killedByVillagers().setVisible(true);
+      new whereTo().setVisible(true);
     }
-    else if(a.equals("A Bow and Arrow"))
+    else if(a.equals("A Bronze Axe"))
       {
-      weapon = "bow";
-      new gameScreen().setVisible(true);
+      weapon = "axe";
+      new whereTo().setVisible(true);
     }
     else if(a.equals("A Torch"))
       {
       weapon = "torch";
-      new gameScreen().setVisible(true);
+      new whereTo().setVisible(true);
     }
    }
 }

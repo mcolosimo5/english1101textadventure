@@ -17,13 +17,19 @@ public class noQ extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("The Gatekeeper Respons "Hmm... Questionable..."");
+    JLabel content = new JLabel("The Gatekeeper Responds 'Hmm... Questionable...'");
     add(content);
     
-    JButton cont = new JButton("Continue");
-    cont.addActionListener(this);
-    add(cont);
+    JLabel content2 = new JLabel("You hear whispers around you. What do you do?");
+    add(content2);
     
+    JButton hide = new JButton("Hide Quickly and Quietly");
+    hide.addActionListener(this);
+    add(hide);
+    
+    JButton wait = new JButton("Wait for the Gatekeeper");
+    wait.addActionListener(this);
+    add(wait);
     
    }
   
@@ -31,9 +37,13 @@ public class noQ extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Continue"))
+    if (a.equals("Wait for the Gatekeeper"))
           {
-      new gameScreen().setVisible(true);
+      new waitScreen().setVisible(true);
+    }
+    else if (a.equals("Hide Quickly and Quietly"))
+    {
+      new hideScreen().setVisible(true);
     }
    }
 }

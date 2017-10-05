@@ -18,7 +18,7 @@ public class oldManForest2 extends JFrame  {
     setLayout(new FlowLayout());
     
     
-    JLabel content = new JLabel("The man Questions your name. He responds, I don't believe that is your real name.");
+    JLabel content = new JLabel("The man Questions your name.");
     add(content);
     
     JLabel content2 = new JLabel("He gives you one more chance to provide him a less Questionable name.");
@@ -47,17 +47,16 @@ public class oldManForest2 extends JFrame  {
       }
       if (name.length() < 12)
       {
-        new nameTooShortScreen().setVisible(true);
+        new oldManForestDeath().setVisible(true);
       }
       
       else if (containsQ == false)
       {
-        new waitScreen().setVisible(true);
+        new oldManForestDeath().setVisible(true);
       }
       else if (containsQ == true && name.length() >= 12)
       {
-        gameScreen.nameGood = name;
-        new gameScreen2().setVisible(true);
+        new investigation().setVisible(true);
       }
     }
     }

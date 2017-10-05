@@ -61,7 +61,8 @@ public class forest extends JFrame {
       }
       if (containsTerm == true)
       {
-        new backstory2().setVisible(true);
+        actionTaken = name;
+        new oldManForest().setVisible(true);
       }
       
       else

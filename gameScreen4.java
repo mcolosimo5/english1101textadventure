@@ -17,9 +17,13 @@ public class gameScreen4 extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
     JLabel content = new JLabel("You must prepare to search for the killer. You go to the armory to get a weapon.");
     add(content);
+    
+    content.setForeground(Color.WHITE);
     
     JButton sword = new JButton("A Silver Sword");
     sword.addActionListener(this);

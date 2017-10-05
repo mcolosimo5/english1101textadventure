@@ -20,6 +20,9 @@ public class victory extends JFrame implements ActionListener {
     JLabel content = new JLabel("You Completed Level 1!");
     add(content);
     
+    JLabel content2 = new JLabel("You died " + deathScreen.deathCount1 + " times while completing level 1.");
+    add(content2);
+    
     JButton cont = new JButton("Return to Level Menu");
     cont.addActionListener(this);
     add(cont);

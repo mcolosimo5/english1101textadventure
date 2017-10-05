@@ -17,10 +17,10 @@ public class wereWolfWait extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You follow the clothing. It was a trap! You get knocked out by something and never wake up...");
+    JLabel content = new JLabel("You wait for the werewolf to make the first move.");
     add(content);
     
-    JLabel content2 = new JLabel("You die.");
+    JLabel content2 = new JLabel("It attacks and catches you off guard. It slashes you to death with its claws.");
     add(content2);
     
     

@@ -19,21 +19,36 @@ public class investigation extends JFrame implements ActionListener {
     
     JLabel content = new JLabel("The man lets you live.");
     add(content);
-   = 
+    
     JLabel content2 = new JLabel("You tell him about your adventure, and he tells you about strange events that have been hapening near the forest's edge.");
-    add(content);
+    add(content2);
     
-    JButton sword = new JButton("A Silver Sword");
-    sword.addActionListener(this);
-    add(sword);
+    JLabel content3 = new JLabel("You continue on your journey to find the killer.");
+    add(content3);
+    
+    JLabel content4 = new JLabel("As you approach the edge of the forest, you stumble on three potential clues.");
+    add(content4);
+    
+    JLabel content5 = new JLabel("In front of you, you see a blood covered branch.");
+    add(content5);
       
-    JButton axe = new JButton("A Bronze Axe");
-    axe.addActionListener(this);
-    add(axe);
+    JLabel content6 = new JLabel("To your right, you see animal footprints, and to your left, you see a tattered article of clothing.");
+    add(content6);
     
-    JButton torch = new JButton("A Torch");
-    torch.addActionListener(this);
-    add(torch);
+    JLabel content7 = new JLabel("Which clue do you follow?");
+    add(content7);
+    
+    JButton blood = new JButton("The Blood");
+    blood.addActionListener(this);
+    add(blood);
+      
+    JButton footprints = new JButton("The Footprints");
+    footprints.addActionListener(this);
+    add(footprints);
+    
+    JButton clothes = new JButton("The Clothing");
+    clothes.addActionListener(this);
+    add(clothes);
     
    }
   
@@ -41,20 +56,17 @@ public class investigation extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("A Silver Sword"))
+    if (a.equals("The Blood"))
           {
-      weapon = "sword";
+      new blood().setVisible(true);
+    }
+    else if(a.equals("The Footprints"))
+      {
       new whereTo().setVisible(true);
     }
-    else if(a.equals("A Bronze Axe"))
+    else if(a.equals("The Clothing"))
       {
-      weapon = "axe";
-      new whereTo().setVisible(true);
-    }
-    else if(a.equals("A Torch"))
-      {
-      weapon = "torch";
-      new whereTo().setVisible(true);
+      new clothing().setVisible(true);
     }
    }
 }

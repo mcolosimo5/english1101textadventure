@@ -19,13 +19,13 @@ public class gameScreen2 extends JFrame implements ActionListener  {
     setLayout(new FlowLayout());
     
     
-    JLabel contentGameScreen = new JLabel("The old man’s stern expression transforms to one of respect and reverence.");
+    JLabel contentGameScreen = new JLabel("The old man's stern expression transforms to one of respect and reverence.");
     add(contentGameScreen);
     
-    JLabel contentGameScreen2 = new JLabel("He hurriedly opens the gate and welcomes you inside…"); 
+    JLabel contentGameScreen2 = new JLabel("He hurriedly opens the gate and welcomes you inside."); 
     add(contentGameScreen2);
     
-    JLabel contentGameScreen3 = new JLabel("The town doesn’t have many buildings, but you notice the warm glow of the furnace coming from the dusty blacksmith hut."); 
+    JLabel contentGameScreen3 = new JLabel("The town doesn't have many buildings, but you notice the warm glow of the furnace coming from the dusty blacksmith hut."); 
     add(contentGameScreen3);
     
     JLabel contentGameScreen4 = new JLabel("The rest of the town seems to be built around a temple to some unknown diety populated by friendly-looking monks.");

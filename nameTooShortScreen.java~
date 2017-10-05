@@ -17,6 +17,9 @@ public class nameTooShortScreen extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
+    JLabel content1 = new JLabel("Hmm... Questionable... That name sounds too simple, like you made it up.");
+    add(content1);
+    
     JLabel content = new JLabel("The gatekeeper thinks that you are lying about your name. He proceeds to pull out a club and beat you to death.");
     add(content);
     
@@ -33,7 +36,7 @@ public class nameTooShortScreen extends JFrame implements ActionListener {
     
     if (a.equals("Continue"))
           {
-      new gameScreen().setVisible(true);
+      new deathScreen().setVisible(true);
     }
    }
 }

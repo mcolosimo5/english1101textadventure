@@ -17,6 +17,9 @@ public class blacksmith extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     JLabel content = new JLabel("You enter the blacksmith's shop. A gruff looking man asks, 'What do you want?'");
     add(content);
@@ -29,6 +32,11 @@ public class blacksmith extends JFrame implements ActionListener {
     
     JLabel content4 = new JLabel("The sword is made of dwarvish metals mined from the mountains. It is strong and sturdy.");
     add(content4);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    content4.setForeground(Color.WHITE);
    
     JButton sword = new JButton("Sword");
     sword.addActionListener(this);

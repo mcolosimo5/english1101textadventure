@@ -16,12 +16,18 @@ public class noQ extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     JLabel content = new JLabel("The Gatekeeper Responds 'Hmm... Questionable...'");
     add(content);
     
     JLabel content2 = new JLabel("You hear whispers around you. What do you do?");
     add(content2);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     
     JButton hide = new JButton("Hide Quickly and Quietly");
     hide.addActionListener(this);

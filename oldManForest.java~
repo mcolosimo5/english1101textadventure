@@ -11,18 +11,21 @@ public class oldManForest extends JFrame {
     new oldManForest().setVisible(true);
   }
   
-  public gameScreen() {
+  public oldManForest() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
     
-    JLabel contentGameScreen = new JLabel("After what seems like an eternity of walking, you arrive at a small, unimpressive town.");
-    add(contentGameScreen);
+    JLabel content = new JLabel("You decide to " + forest.actionTaken + " .");
+    add(content);
     
-    JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name. What do you tell him?");
-    add(contentGameScreen2);
+    JLabel content2 = new JLabel("As you are walking around, a man approaches you with his bow aimed at your head.");
+    add(content2);
+    
+    JLabel content3 = new JLabel("He asks you for your name. You tell him.");
+    add(content3);
     
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);
@@ -30,28 +33,15 @@ public class oldManForest extends JFrame {
     JButton submit = new JButton("Submit");
     submit.addActionListener(new ActionListener () {public void actionPerformed (ActionEvent ae){
       String name;
-      boolean containsQ = false;
+
       name = nameTextField.getText();
-      for (int i = 0; i < name.length(); i++)
+      if (name.equals(gameScreen.nameGood))
       {
-        if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
-        {
-          containsQ = true;
-        }
+        new investigation().setVisible(true);
       }
-      if (name.length() < 12)
+      else
       {
-        new nameTooShortScreen().setVisible(true);
-      }
-      
-      else if (containsQ == false)
-      {
-        new noQ().setVisible(true);
-      }
-      else if (containsQ == true && name.length() >= 12)
-      {
-        nameGood = nameTextField.getText();
-        new gameScreen2().setVisible(true);
+        new oldManForest2().setVisible(true);
       }
     }
     }

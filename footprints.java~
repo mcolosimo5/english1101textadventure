@@ -17,25 +17,22 @@ public class footprints extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You enter the blacksmith's shop. A gruff looking man asks, 'What do you want?'");
+    JLabel content = new JLabel("You follow the footprints. They lead you down a strange path.");
     add(content);
     
-    JLabel content2 = new JLabel("You are nervous, and say nothing. The man laughs and says 'Would you like a sword or a bow and arrows?'");
+    JLabel content2 = new JLabel("You turn a corner when you suddenly see a wolf-like creature standing in front of you.");
     add(content2);
     
-    JLabel content3 = new JLabel("The bow is light and versatile.");
+    JLabel content3 = new JLabel("It's a werewolf! Do you wait for the werewolf to make the first move, or do you attack?");
     add(content3);
     
-    JLabel content4 = new JLabel("The sword is made of dwarvish metals mined from the mountains. It is strong and sturdy.");
-    add(content4);
-   
-    JButton sword = new JButton("Sword");
-    sword.addActionListener(this);
-    add(sword);
+    JButton attack = new JButton("Attack");
+    attack.addActionListener(this);
+    add(attack);
     
-    JButton bow = new JButton("Bow");
-    bow.addActionListener(this);
-    add(bow);
+    JButton wait = new JButton("Wait");
+    wait.addActionListener(this);
+    add(wait);
     
    }
   
@@ -43,16 +40,12 @@ public class footprints extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Sword"))
+    if (a.equals("Wait"))
           {
-      gameScreen2.sword = true;
-      bow = false;
-      new blacksmith2().setVisible(true);
+      new wereWolfWait().setVisible(true);
     }
     if (a.equals("Bow"))
           {
-      gameScreen2.sword = false;
-      bow = true;
       new blacksmith2().setVisible(true);
     }
    }

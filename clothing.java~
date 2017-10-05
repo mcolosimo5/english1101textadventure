@@ -17,10 +17,10 @@ public class clothing extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    JLabel content = new JLabel("You follow the blood. It was a trap.");
+    JLabel content = new JLabel("You follow the clothing. It was a trap! You get knocked out by something and never wake up...");
     add(content);
     
-    JLabel content2 = new JLabel("Something leaps out from behind you and hits you over the head. You die.");
+    JLabel content2 = new JLabel("You die.");
     add(content2);
     
     

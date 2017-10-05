@@ -33,7 +33,7 @@ public class waitScreen extends JFrame implements ActionListener {
     
     if (a.equals("Continue"))
           {
-      new gameScreen().setVisible(true);
+      new deathScreen().setVisible(true);
     }
    }
 }

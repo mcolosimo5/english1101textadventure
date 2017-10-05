@@ -36,7 +36,7 @@ public class killedByVillagers extends JFrame implements ActionListener {
     
     if (a.equals("Continue"))
           {
-      new deathScreen().setVisible(true);
+      new deathScreen2().setVisible(true);
     }
    }
 }

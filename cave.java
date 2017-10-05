@@ -16,6 +16,9 @@ public class cave extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     if (gameScreen2.sword == true || blacksmith.bow == true)
     {
@@ -27,6 +30,10 @@ public class cave extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("A dagger pierces your side, and the bandits mercilessly stab you to death.");
     add(content3);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
     }
     else
     {
@@ -38,6 +45,11 @@ public class cave extends JFrame implements ActionListener {
       
       JLabel content6 = new JLabel("You return the treasure to the town. You are a hero!");
       add(content6);
+      
+      content4.setForeground(Color.WHITE);
+      content5.setForeground(Color.WHITE);
+      content6.setForeground(Color.WHITE);
+      
     }
     
     JButton cont = new JButton("Continue");

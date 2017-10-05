@@ -17,7 +17,9 @@ public class gameScreen extends JFrame {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
-    
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     JLabel contentGameScreen = new JLabel("After what seems like an eternity of walking, you arrive at a small, unimpressive town.");
     add(contentGameScreen);

@@ -17,7 +17,7 @@ public class gameScreen3 extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    if (gameScreen2.sword == true)
+    if (gameScreen2.sword == true || blacksmith.bow == true)
     {
     JLabel contentGameScreen = new JLabel("As you wander out of the blacksmith's hut toward the lively tavern to have a well deserved pint,");
     add(contentGameScreen);

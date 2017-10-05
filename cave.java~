@@ -17,9 +17,9 @@ public class cave extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
     
-    if (gameScreen2.sword == true)
+    if (gameScreen2.sword == true || blacksmith.bow == true)
     {
-    JLabel content = new JLabel("It is dark in the cave, you can’t see anything. If only you had a torch or something...");
+    JLabel content = new JLabel("It is dark in the cave, you cannot see anything. If only you had a torch or something...");
     add(content);
     
     JLabel content2 = new JLabel("You hear footsteps all around you.");
@@ -51,11 +51,11 @@ public class cave extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Continue") && gameScreen2.sword == true)
+    if (a.equals("Continue") && (gameScreen2.sword == true || blacksmith.bow == true))
           {
       new deathScreen().setVisible(true);
     }
-     if (a.equals("Continue") && gameScreen2.sword == false)
+     if (a.equals("Continue") && gameScreen2.sword == false && blacksmith.bow == false)
      {
        new victory().setVisible(true);
      }

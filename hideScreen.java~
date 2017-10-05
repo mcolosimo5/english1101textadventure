@@ -21,7 +21,7 @@ public class hideScreen extends JFrame  {
     JLabel contentGameScreen = new JLabel("You Quickly hide under a Quilt and eat some Quail");
     add(contentGameScreen);
     
-    JLabel contentGameScreen2 = new JLabel("The gatekeeper seems impressed with your commitment to the letter Q");
+    JLabel contentGameScreen2 = new JLabel("The gatekeeper seems impressed with your commitment to the letter Q.");
     add(contentGameScreen2);
     
     JLabel contentGameScreen3 = new JLabel("He decides to give you one more chance to tell him your name. You tell him...");
