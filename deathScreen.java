@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class deathScreen extends JFrame implements ActionListener  {
   
   private static final long serialVersionUID = 1L;
+  public static int deathCount1 = 0;
   
   public static void main (String args [])
   {
@@ -39,6 +40,7 @@ public class deathScreen extends JFrame implements ActionListener  {
     
     if (a.equals("Yes"))
           {
+      deathCount1 = deathCount1 +1;
       new backstory().setVisible(true);
     }
      

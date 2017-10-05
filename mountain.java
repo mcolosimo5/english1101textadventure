@@ -28,7 +28,7 @@ public class mountain extends JFrame implements ActionListener {
       JLabel content6 = new JLabel("The bandits are swept away, but you are able to anchor yourself with your sword and hang on.");
       add(content6);
       
-      JLabel content7 = new JLabel("You retrieve the treasure and return it to the townspeople. You are a hero.");
+      JLabel content7 = new JLabel("You retrieve the treasure and return it to the townspeople. You are a hero!");
       add(content7);
     }
     

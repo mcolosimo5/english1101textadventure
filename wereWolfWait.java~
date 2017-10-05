@@ -1,0 +1,46 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class wereWolfWait extends JFrame implements ActionListener {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new wereWolfWait().setVisible(true);
+  }
+  
+  public wereWolfWait() {
+    super("Play Game");
+    setSize(800, 700);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    JLabel content = new JLabel("You follow the clothing. It was a trap! You get knocked out by something and never wake up...");
+    add(content);
+    
+    JLabel content2 = new JLabel("You die.");
+    add(content2);
+    
+    
+    
+    JButton cont = new JButton("Continue");
+    cont.addActionListener(this);
+    add(cont);
+    
+    
+   }
+  
+   @Override 
+  public void actionPerformed (ActionEvent e) {
+    String a = e.getActionCommand();
+    
+    new deathScreen2().setVisible(true);
+   }
+}
+  
+  
+      
+ 
+  

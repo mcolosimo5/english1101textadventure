@@ -1,0 +1,56 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class instructions extends JFrame implements ActionListener {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new instructions().setVisible(true);
+  }
+  
+  public instructions() {
+    super("Play Game");
+    setSize(800, 700);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    JLabel content = new JLabel("You wake up under an old oak tree in a spacious forest.");
+    add(content);
+    
+    JLabel content4 = new JLabel("You're lying on the ground, and your clothes are tattered and dirty.");
+    add(content4);
+       
+    JLabel content2 = new JLabel("There is a small creek to your left. You get up and walk towards the stream.");
+    add(content2);
+   
+    JLabel content5 = new JLabel("You walk along the stream towards the east for a while, and then find a small dirt path.");
+    add(content5);
+    
+    JLabel content6 = new JLabel("You start to walk southeast along the path.");
+    add(content6);
+    
+    JButton cont = new JButton("Continue");
+    cont.addActionListener(this);
+    add(cont);
+    
+    
+   }
+  
+   @Override 
+  public void actionPerformed (ActionEvent e) {
+    String a = e.getActionCommand();
+    
+    if (a.equals("Continue"))
+          {
+      new levelScreen().setVisible(true);
+    }
+   }
+}
+  
+  
+      
+ 
+  

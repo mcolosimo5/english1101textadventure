@@ -1,0 +1,68 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class attackWerewolf extends JFrame implements ActionListener {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new attackWerewolf().setVisible(true);
+  }
+  
+  public attackWerewolf() {
+    super("Play Game");
+    setSize(800, 700);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    if (weapon.equals("axe")
+    {
+    JLabel content = new JLabel("You chase the werewolf with your bronze axe. You swing your axe at the werewolf.");
+    add(content);
+    
+    JLabel content2 = new JLabel("You clearly made contact with the werewolf, but it looks like it did not feel anything!");
+    add(content2);
+    
+    JLabel content3 = new JLabel("It luges at you with its claws. You die.");
+    add(content3);
+    }
+    else
+    {
+      JLabel content4 = new JLabel("Your staff illuminates the cave, and you see a bandit waiting to ambush you.");
+      add(content4);
+      
+      JLabel content5 = new JLabel("You defeat the bandit and find the stolen treasure.");
+      add(content5);
+      
+      JLabel content6 = new JLabel("You return the treasure to the town. You are a hero!");
+      add(content6);
+    }
+    
+    JButton cont = new JButton("Continue");
+    cont.addActionListener(this);
+    add(cont);
+    
+    
+   }
+  
+   @Override 
+  public void actionPerformed (ActionEvent e) {
+    String a = e.getActionCommand();
+    
+    if (a.equals("Continue") && (gameScreen2.sword == true || blacksmith.bow == true))
+          {
+      new deathScreen().setVisible(true);
+    }
+     if (a.equals("Continue") && gameScreen2.sword == false && blacksmith.bow == false)
+     {
+       new victory().setVisible(true);
+     }
+   }
+}
+  
+  
+      
+ 
+  

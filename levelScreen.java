@@ -26,12 +26,16 @@ public class levelScreen extends JFrame implements ActionListener  {
     JButton level3 = new JButton ("Level 3");
     level3.addActionListener(this);
     
+    JButton instructions = new JButton ("Instructions");
+    instructions.addActionListener(this);
+    
     JButton exit = new JButton ("Exit");
     exit.addActionListener(this);
     
     add(level1);
     add(level2);
     add(level3);
+    add(instructions);
     add(exit);
     
   }
@@ -54,6 +58,10 @@ public class levelScreen extends JFrame implements ActionListener  {
     else if(a.equals("Exit") )
               {
                 System.exit(0);
+    }
+    else if(a.equals("Instructions") )
+              {
+                new instructions().setVisible(true);
     }
   }
 }

@@ -44,6 +44,9 @@ public class deathScreen extends JFrame implements ActionListener  {
      
     else if (a.equals("No"))
     {
+      new levelScreen().setVisible(true);
+    }
+    {
 
     }
       

@@ -33,7 +33,7 @@ public class swamp extends JFrame implements ActionListener {
       JLabel content4 = new JLabel("You shoot the bandits as they run into the swamp.");
       add(content4);
       
-      JLabel content5 = new JLabel("You retrieve the treasure and return it to the townspeople. You are a hero.");
+      JLabel content5 = new JLabel("You retrieve the treasure and return it to the townspeople. You are a hero!");
       add(content5);
     }
     else

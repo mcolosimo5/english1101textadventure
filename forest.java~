@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class forest extends JFrame {
   
   private static final long serialVersionUID = 1L;
+  public static String actionTaken = "";
   
   public static void main (String args [])
   {
@@ -21,38 +22,54 @@ public class forest extends JFrame {
     JLabel contentGameScreen = new JLabel("You arrive at the forest. What is your next course of action?");
     add(contentGameScreen);
     
-    JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name. What do you tell him?");
-    add(contentGameScreen2);
     
-    final JTextField nameTextField = new JTextField(20);
+    final JTextField nameTextField = new JTextField(40);
     add(nameTextField);
     
     JButton submit = new JButton("Submit");
     submit.addActionListener(new ActionListener () {public void actionPerformed (ActionEvent ae){
       String name;
-      boolean containsQ = false;
-      name = (nameTextField.getText()).toLowerCase;
-      for (int i = 0; i < name.length(); i++)
+      boolean containsTerm = false;
+      name = (nameTextField.getText()).toLowerCase();
+      for (int i = 0; i < name.length() - 5; i++)
       {
-        if(name.charAt(i) == 'q' || name.charAt(i) == 'Q')
+        if((name.substring(i,i + 6)).equals("search"))
         {
-          containsQ = true;
+          containsTerm = true;
         }
       }
-      if (name.length() < 12)
+      for (int i = 0; i < name.length() - 3; i++)
       {
-        new nameTooShortScreen().setVisible(true);
+        if((name.substring(i,i + 4)).equals("look"))
+        {
+          containsTerm = true;
+        }
+      }
+      for (int i = 0; i < name.length() - 3; i++)
+      {
+        if((name.substring(i,i + 4)).equals("find"))
+        {
+          containsTerm = true;
+        }
+      }
+       for (int i = 0; i < name.length() - 6; i++)
+      {
+        if((name.substring(i,i + 7)).equals("explore"))
+        {
+          containsTerm = true;
+        }
+      }
+      if (containsTerm == true)
+      {
+        new backstory2().setVisible(true);
       }
       
-      else if (containsQ == false)
+      else
       {
-        new noQ().setVisible(true);
+        actionTaken = name;
+        new forestDeath().setVisible(true);
       }
-      else if (containsQ == true && name.length() >= 12)
-      {
-        nameGood = nameTextField.getText();
-        new gameScreen2().setVisible(true);
-      }
+    
     }
     }
     );

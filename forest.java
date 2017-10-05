@@ -23,7 +23,7 @@ public class forest extends JFrame {
     add(contentGameScreen);
     
     
-    final JTextField nameTextField = new JTextField(20);
+    final JTextField nameTextField = new JTextField(40);
     add(nameTextField);
     
     JButton submit = new JButton("Submit");
@@ -61,7 +61,8 @@ public class forest extends JFrame {
       }
       if (containsTerm == true)
       {
-        new backstory2().setVisible(true);
+        actionTaken = name;
+        new oldManForest().setVisible(true);
       }
       
       else

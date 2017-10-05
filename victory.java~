@@ -20,7 +20,7 @@ public class victory extends JFrame implements ActionListener {
     JLabel content = new JLabel("You Completed Level 1!");
     add(content);
     
-    JButton cont = new JButton("Return to Level Screen");
+    JButton cont = new JButton("Return to Level Menu");
     cont.addActionListener(this);
     add(cont);
     
@@ -31,7 +31,7 @@ public class victory extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Return to Level Screen"))
+    if (a.equals("Return to Level Menu"))
           {
       new levelScreen().setVisible(true);
     }

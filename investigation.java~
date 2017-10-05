@@ -1,0 +1,65 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class investigation extends JFrame implements ActionListener {
+  
+  private static final long serialVersionUID = 1L;
+  
+  public static void main (String args [])
+  {
+    new investigation().setVisible(true);
+  }
+  
+  public investigation() {
+    super("Play Game");
+    setSize(800, 700);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new FlowLayout());
+    
+    JLabel content = new JLabel("The man lets you live.");
+    add(content);
+   = 
+    JLabel content2 = new JLabel("You tell him about your adventure, and he tells you about strange events that have been hapening near the forest's edge.");
+    add(content);
+    
+    JButton sword = new JButton("A Silver Sword");
+    sword.addActionListener(this);
+    add(sword);
+      
+    JButton axe = new JButton("A Bronze Axe");
+    axe.addActionListener(this);
+    add(axe);
+    
+    JButton torch = new JButton("A Torch");
+    torch.addActionListener(this);
+    add(torch);
+    
+   }
+  
+   @Override 
+  public void actionPerformed (ActionEvent e) {
+    String a = e.getActionCommand();
+    
+    if (a.equals("A Silver Sword"))
+          {
+      weapon = "sword";
+      new whereTo().setVisible(true);
+    }
+    else if(a.equals("A Bronze Axe"))
+      {
+      weapon = "axe";
+      new whereTo().setVisible(true);
+    }
+    else if(a.equals("A Torch"))
+      {
+      weapon = "torch";
+      new whereTo().setVisible(true);
+    }
+   }
+}
+  
+  
+      
+ 
+  
