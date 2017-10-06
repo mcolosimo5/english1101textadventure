@@ -46,10 +46,12 @@ public class noQ extends JFrame implements ActionListener {
     if (a.equals("Wait for the Gatekeeper"))
           {
       new waitScreen().setVisible(true);
+      setVisible(false);
     }
     else if (a.equals("Hide Quickly and Quietly"))
     {
       new hideScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

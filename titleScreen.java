@@ -41,6 +41,7 @@ public class titleScreen extends JFrame implements ActionListener {
     if (a.equals("Play"))
           {
       new levelScreen().setVisible(true);
+      setVisible(false);
     }
      
     

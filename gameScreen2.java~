@@ -17,6 +17,9 @@ public class gameScreen2 extends JFrame implements ActionListener  {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     
     JLabel contentGameScreen = new JLabel("The old man's stern expression transforms to one of respect and reverence.");
@@ -33,6 +36,12 @@ public class gameScreen2 extends JFrame implements ActionListener  {
     
     JLabel contentGameScreen5 = new JLabel("The old man pushes you toward in the direction of those two alluring buildings.To which to do you go?           ");
     add(contentGameScreen5);
+    
+    contentGameScreen.setForeground(Color.WHITE);
+    contentGameScreen2.setForeground(Color.WHITE);
+    contentGameScreen3.setForeground(Color.WHITE);
+    contentGameScreen4.setForeground(Color.WHITE);
+    contentGameScreen5.setForeground(Color.WHITE);
     
     JButton temple = new JButton ("The Temple");
     temple.addActionListener(this);

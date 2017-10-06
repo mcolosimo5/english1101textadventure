@@ -16,8 +16,12 @@ public class titleScreen extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    getContentPane().setBackground(Color.DARK_GRAY);
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     
     JLabel content = new JLabel("Welcome to Deja Vu");
+    content.setForeground(Color.WHITE);
     add(content);
     
     JButton play = new JButton ("Play");

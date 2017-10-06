@@ -19,6 +19,7 @@ public class whereTo extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("Now that you have your " + gameScreen4.weapon + ", it is time to search for the killer.");
     add(content);
@@ -31,6 +32,11 @@ public class whereTo extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("Where do you go?");
     add(content3);
+    
+    content.setForeground(Color.WHITE);
+    content1.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
     
     JButton forest = new JButton("The Forest");
     forest.addActionListener(this);
@@ -53,14 +59,17 @@ public class whereTo extends JFrame implements ActionListener {
     if (a.equals("The Forest"))
           {
       new forest().setVisible(true);
+      setVisible(false);
     }
     else if(a.equals("The Cave"))
       {
       new cave2().setVisible(true);
+      setVisible(false);
     }
     else if(a.equals("The Graveyard"))
       {
       new graveyard().setVisible(true);
+      setVisible(false);
     }
    }
 }

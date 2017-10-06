@@ -61,10 +61,12 @@ public class gameScreen2 extends JFrame implements ActionListener  {
     if (a.equals("The Blacksmith's Hut"))
           {
       new blacksmith().setVisible(true);
+      setVisible(false);
     }
     else if (a.equals("The Temple"))
           {
       new temple().setVisible(true);
+      setVisible(false);
       
     }
      

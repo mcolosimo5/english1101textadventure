@@ -19,6 +19,7 @@ public class gameScreen4 extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("You must prepare to search for the killer. You go to the armory to get a weapon.");
     add(content);
@@ -47,16 +48,19 @@ public class gameScreen4 extends JFrame implements ActionListener {
           {
       weapon = "sword";
       new whereTo().setVisible(true);
+      setVisible(false);
     }
     else if(a.equals("A Bronze Axe"))
       {
       weapon = "axe";
       new whereTo().setVisible(true);
+      setVisible(false);
     }
     else if(a.equals("A Torch"))
       {
       weapon = "torch";
       new whereTo().setVisible(true);
+      setVisible(false);
     }
    }
 }

@@ -48,11 +48,13 @@ public class deathScreen extends JFrame implements ActionListener  {
           {
       deathCount1 = deathCount1 +1;
       new backstory().setVisible(true);
+      setVisible(false);
     }
      
     else if (a.equals("No"))
     {
       new levelScreen().setVisible(true);
+      setVisible(false);
     }
     {
 

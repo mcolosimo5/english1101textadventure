@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 public class backstory extends JFrame implements ActionListener {
   
@@ -56,6 +57,7 @@ public class backstory extends JFrame implements ActionListener {
     if (a.equals("Continue"))
           {
       new gameScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

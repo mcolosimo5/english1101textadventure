@@ -18,6 +18,7 @@ public class chase extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("You chase after the werewolf, but the werewolf is much faster. You can no longer see it anymore.");
     add(content);
@@ -27,6 +28,10 @@ public class chase extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("Where do you go?");
     add(content3);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
     
     JButton river = new JButton("The River");
     river.addActionListener(this);
@@ -46,17 +51,20 @@ public class chase extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("The Blood"))
+    if (a.equals("The River"))
           {
-      new blood().setVisible(true);
+      new river().setVisible(true);
+      setVisible(false);
     }
-    else if(a.equals("The Footprints"))
+    else if(a.equals("The Field"))
       {
-      new whereTo().setVisible(true);
+      new field().setVisible(true);
+      setVisible(false);
     }
-    else if(a.equals("The Clothing"))
+    else if(a.equals("The Cave"))
       {
-      new clothing().setVisible(true);
+      new cave3().setVisible(true);
+      setVisible(false);
     }
    }
 }

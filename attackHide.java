@@ -53,6 +53,14 @@ public class attackHide extends JFrame implements ActionListener {
     cave.addActionListener(this);
     add(cave);
     
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    content4.setForeground(Color.WHITE);
+    content5.setForeground(Color.WHITE);
+    content6.setForeground(Color.WHITE);
+    content7.setForeground(Color.WHITE);
+    
    }
   
    @Override 
@@ -62,14 +70,17 @@ public class attackHide extends JFrame implements ActionListener {
     if (a.equals("The Mountains"))
           {
       new mountain().setVisible(true);
+      setVisible(false);
     }
     if (a.equals("The Swamp"))
           {
       new swamp().setVisible(true);
+      setVisible(false);
     }
     if (a.equals("The Cave"))
           {
       new cave().setVisible(true);
+      setVisible(false);
     }
    }
 }

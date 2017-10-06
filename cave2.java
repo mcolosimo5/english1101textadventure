@@ -6,7 +6,7 @@ public class cave2 extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
-  public static void cave2 (String args [])
+  public static void main (String args [])
   {
     new cave2().setVisible(true);
   }
@@ -18,6 +18,7 @@ public class cave2 extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     if((gameScreen4.weapon).equals("sword") ||  (gameScreen4.weapon).equals("axe"))
     {
@@ -26,6 +27,9 @@ public class cave2 extends JFrame implements ActionListener {
       
       JLabel content5 = new JLabel("You fall into a dark pit and die.");
       add(content5);
+      
+      content4.setForeground(Color.WHITE);
+      content5.setForeground(Color.WHITE);
     }
     
     else
@@ -45,6 +49,12 @@ public class cave2 extends JFrame implements ActionListener {
     
     JLabel content5 = new JLabel("Whenever you decide to leave, you cannot find your way out of the cave. You starve to death.");
     add(content5);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    content4.setForeground(Color.WHITE);
+    content5.setForeground(Color.WHITE);
     }
     
     JButton cont = new JButton("Continue");
@@ -59,6 +69,7 @@ public class cave2 extends JFrame implements ActionListener {
     String a = e.getActionCommand();
     
     new deathScreen2().setVisible(true);
+    setVisible(false);
    }
 }
   

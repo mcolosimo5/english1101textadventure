@@ -43,6 +43,7 @@ public class victory extends JFrame implements ActionListener {
     if (a.equals("Return to Level Menu"))
           {
       new levelScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

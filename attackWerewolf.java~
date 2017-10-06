@@ -16,6 +16,9 @@ public class attackWerewolf extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     if (gameScreen4.weapon.equals("axe"))
     {
@@ -27,6 +30,11 @@ public class attackWerewolf extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("It luges at you with its claws. You die.");
     add(content3);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    
     }
     else if (gameScreen4.weapon.equals("torch"))
     {
@@ -38,6 +46,11 @@ public class attackWerewolf extends JFrame implements ActionListener {
       
       JLabel content6 = new JLabel("The werewolf attacks you, and you die.");
       add(content6);
+      
+      content4.setForeground(Color.WHITE);
+      content5.setForeground(Color.WHITE);
+      content6.setForeground(Color.WHITE);
+      
     }
     else
     {
@@ -49,6 +62,11 @@ public class attackWerewolf extends JFrame implements ActionListener {
       
       JLabel content9 = new JLabel("You then push the werewolf back and stab it with your sword. The werewolf cries in pain and runs away.");
       add(content9);
+      
+      content7.setForeground(Color.WHITE);
+      content8.setForeground(Color.WHITE);
+      content9.setForeground(Color.WHITE);
+      
     }
     
     JButton cont = new JButton("Continue");
@@ -68,7 +86,7 @@ public class attackWerewolf extends JFrame implements ActionListener {
     }
      if (a.equals("Continue") && (gameScreen4.weapon.equals("sword")))
      {
-       new victory().setVisible(true);
+       new chase().setVisible(true);
      }
    }
 }

@@ -52,10 +52,13 @@ public class blacksmith2 extends JFrame {
       if (name.equals(gameScreen.nameGood))
       {
         new gameScreen3().setVisible(true);
+        setVisible(false);
+       
       }
       else
       {
         new wrongName().setVisible(true); 
+        setVisible(false);
       } 
     
     }

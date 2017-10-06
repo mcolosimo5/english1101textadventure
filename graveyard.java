@@ -6,7 +6,7 @@ public class graveyard extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
-  public static void cave2 (String args [])
+  public static void main (String args [])
   {
     new graveyard().setVisible(true);
   }
@@ -18,6 +18,7 @@ public class graveyard extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     if((gameScreen4.weapon).equals("sword") ||  (gameScreen4.weapon).equals("axe"))
     {
@@ -38,6 +39,13 @@ public class graveyard extends JFrame implements ActionListener {
       
       JLabel content8 = new JLabel("They kill you.");
       add(content8); 
+      
+      content4.setForeground(Color.WHITE);
+      content5.setForeground(Color.WHITE);
+      content6.setForeground(Color.WHITE);
+      content9.setForeground(Color.WHITE);
+      content7.setForeground(Color.WHITE);
+      content8.setForeground(Color.WHITE);
     }
     
     else
@@ -53,7 +61,13 @@ public class graveyard extends JFrame implements ActionListener {
       add(content2);  
       
       JLabel content3 = new JLabel("You are immobilized, and the people swarm around you. They kill you.");
-      add(content3);   
+      add(content3); 
+      
+       content.setForeground(Color.WHITE);
+       content1.setForeground(Color.WHITE);
+       content2.setForeground(Color.WHITE);
+       content3.setForeground(Color.WHITE);
+ 
       
     }
     
@@ -69,6 +83,7 @@ public class graveyard extends JFrame implements ActionListener {
     String a = e.getActionCommand();
     
     new deathScreen2().setVisible(true);
+    setVisible(false);
    }
 }
   

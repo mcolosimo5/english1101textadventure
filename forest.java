@@ -19,11 +19,13 @@ public class forest extends JFrame {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     
-    JLabel contentGameScreen = new JLabel("You arrive at the forest. What is your next course of action?");
+    JLabel contentGameScreen = new JLabel("You arrive at the forest. What is your next action?");
     add(contentGameScreen);
     
+    contentGameScreen.setForeground(Color.WHITE);
     
     final JTextField nameTextField = new JTextField(40);
     add(nameTextField);
@@ -65,12 +67,14 @@ public class forest extends JFrame {
       {
         actionTaken = name;
         new oldManForest().setVisible(true);
+        setVisible(false);
       }
       
       else
       {
         actionTaken = name;
         new forestDeath().setVisible(true);
+        setVisible(false);
       }
     
     }

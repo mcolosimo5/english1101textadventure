@@ -57,6 +57,7 @@ public class wrongName extends JFrame implements ActionListener {
     if (a.equals("Continue"))
           {
       new deathScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

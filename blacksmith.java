@@ -57,12 +57,14 @@ public class blacksmith extends JFrame implements ActionListener {
       gameScreen2.sword = true;
       bow = false;
       new blacksmith2().setVisible(true);
+      setVisible(false);
     }
     if (a.equals("Bow"))
           {
       gameScreen2.sword = false;
       bow = true;
       new blacksmith2().setVisible(true);
+      setVisible(false);
     }
    }
 }

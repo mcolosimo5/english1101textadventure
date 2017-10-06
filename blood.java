@@ -18,6 +18,7 @@ public class blood extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("You follow the blood. It was a trap!");
     add(content);
@@ -25,7 +26,8 @@ public class blood extends JFrame implements ActionListener {
     JLabel content2 = new JLabel("Something leaps out from behind you and hits you over the head. You die.");
     add(content2);
     
-    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     
     JButton cont = new JButton("Continue");
     cont.addActionListener(this);
@@ -39,6 +41,7 @@ public class blood extends JFrame implements ActionListener {
     String a = e.getActionCommand();
     
     new deathScreen2().setVisible(true);
+    setVisible(false);
    }
 }
   

@@ -16,6 +16,9 @@ public class wrongName extends JFrame implements ActionListener {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     if (gameScreen2.sword == false && blacksmith.bow == false)
     {
@@ -24,6 +27,9 @@ public class wrongName extends JFrame implements ActionListener {
     
     JLabel content2 = new JLabel("You die.");
     add(content2);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     }
     else
     {
@@ -32,6 +38,9 @@ public class wrongName extends JFrame implements ActionListener {
     
     JLabel content2 = new JLabel("He pulls out a sword and kills you.");
     add(content2);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     }
     
     JButton cont = new JButton("Continue");

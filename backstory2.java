@@ -18,6 +18,7 @@ public class backstory2 extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel(" The village throws a celebration for you because you saved the village from the bandits.");
     add(content);
@@ -36,6 +37,13 @@ public class backstory2 extends JFrame implements ActionListener {
 
     JLabel content7 = new JLabel("What do you do?");
     add(content7);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content4.setForeground(Color.WHITE);
+    content5.setForeground(Color.WHITE);
+    content6.setForeground(Color.WHITE);
+    content7.setForeground(Color.WHITE);
       
     JButton wait = new JButton("Let the Guards Investigate");
     wait.addActionListener(this);
@@ -54,10 +62,13 @@ public class backstory2 extends JFrame implements ActionListener {
     if (a.equals("Let the Guards Investigate"))
           {
       new killedByVillagers().setVisible(true);
+      setVisible(false);
+      
     }
     else if(a.equals("Assist in the Investigation"))
       {
       new gameScreen4().setVisible(true);
+      setVisible(false);
     }
    }
 }

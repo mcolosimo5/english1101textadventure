@@ -47,6 +47,7 @@ public class instructions extends JFrame implements ActionListener {
     if (a.equals("Continue"))
           {
       new levelScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

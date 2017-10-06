@@ -66,10 +66,12 @@ public class cave extends JFrame implements ActionListener {
     if (a.equals("Continue") && (gameScreen2.sword == true || blacksmith.bow == true))
           {
       new deathScreen().setVisible(true);
+      setVisible(false);
     }
      if (a.equals("Continue") && gameScreen2.sword == false && blacksmith.bow == false)
      {
        new victory().setVisible(true);
+       setVisible(false);
      }
    }
 }

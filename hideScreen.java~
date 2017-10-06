@@ -16,6 +16,9 @@ public class hideScreen extends JFrame  {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     
     JLabel contentGameScreen = new JLabel("You Quickly hide under a Quilt and eat some Quail");
@@ -26,6 +29,10 @@ public class hideScreen extends JFrame  {
     
     JLabel contentGameScreen3 = new JLabel("He decides to give you one more chance to tell him your name. You tell him...");
     add(contentGameScreen3);
+    
+    contentGameScreen.setForeground(Color.WHITE);
+    contentGameScreen2.setForeground(Color.WHITE);
+    contentGameScreen3.setForeground(Color.WHITE);
     
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);

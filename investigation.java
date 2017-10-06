@@ -18,6 +18,7 @@ public class investigation extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("The man lets you live.");
     add(content);
@@ -40,6 +41,14 @@ public class investigation extends JFrame implements ActionListener {
     JLabel content7 = new JLabel("Which clue do you follow?");
     add(content7);
     
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    content4.setForeground(Color.WHITE);
+    content5.setForeground(Color.WHITE);
+    content6.setForeground(Color.WHITE);
+    content7.setForeground(Color.WHITE);
+    
     JButton blood = new JButton("The Blood");
     blood.addActionListener(this);
     add(blood);
@@ -61,14 +70,17 @@ public class investigation extends JFrame implements ActionListener {
     if (a.equals("The Blood"))
           {
       new blood().setVisible(true);
+      setVisible(false);
     }
     else if(a.equals("The Footprints"))
       {
       new footprints().setVisible(true);
+      setVisible(false);
     }
     else if(a.equals("The Clothing"))
       {
       new clothing().setVisible(true);
+      setVisible(false);
     }
    }
 }

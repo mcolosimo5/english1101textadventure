@@ -46,12 +46,14 @@ public class temple extends JFrame {
         gameScreen2.sword = false;
         blacksmith.bow = false;
         new gameScreen3().setVisible(true);
+        setVisible(false);
       }
       else
       {
         gameScreen2.sword = false;
         blacksmith.bow = false;
         new wrongName().setVisible(true); 
+        setVisible(false);
       } 
     
     }

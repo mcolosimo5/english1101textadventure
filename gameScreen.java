@@ -27,6 +27,9 @@ public class gameScreen extends JFrame {
     JLabel contentGameScreen2 = new JLabel("An old man, possibly the gate keeper, approaches you. He wants to know your name. What do you tell him?");
     add(contentGameScreen2);
     
+    contentGameScreen.setForeground(Color.WHITE);
+    contentGameScreen2.setForeground(Color.WHITE);
+ 
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);
     
@@ -45,21 +48,25 @@ public class gameScreen extends JFrame {
       if (name.length() < 12)
       {
         new nameTooShortScreen().setVisible(true);
+        setVisible(false);
       }
       
       else if (containsQ == false)
       {
         new noQ().setVisible(true);
+        setVisible(false);
       }
       else if (containsQ == true && name.length() >= 12)
       {
         nameGood = nameTextField.getText();
         new gameScreen2().setVisible(true);
+        setVisible(false);
       }
     }
     }
     );
     add(submit);
+
     
   }
   

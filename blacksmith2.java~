@@ -16,6 +16,9 @@ public class blacksmith2 extends JFrame {
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setLayout(new FlowLayout());
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(16, 67, 16));
     
     if (blacksmith.bow == true)
     {
@@ -24,6 +27,9 @@ public class blacksmith2 extends JFrame {
     
     JLabel content2 = new JLabel("with the villagers. He pulls out a contract for you to sign...");
     add(content2);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
     }
     else{
     JLabel content1 = new JLabel("Before giving you your sword, he tells you that it is paramount that you use the sword for good.");
@@ -31,6 +37,9 @@ public class blacksmith2 extends JFrame {
     
     JLabel content3 = new JLabel("He pulls out a contract for you to sign.");
     add(content3);
+    
+    content1.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
     }
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);

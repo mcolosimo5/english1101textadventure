@@ -78,14 +78,17 @@ public class swamp extends JFrame implements ActionListener {
     if (a.equals("Continue") && gameScreen2.sword == true)
           {
       new deathScreen().setVisible(true);
+      setVisible(false);
     }
     else if (a.equals("Continue") && blacksmith.bow == true)
           {
       new victory().setVisible(true);
+      setVisible(false);
     }
     else
     {
       new deathScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

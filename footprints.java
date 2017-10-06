@@ -18,6 +18,7 @@ public class footprints extends JFrame implements ActionListener {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("You follow the footprints. They lead you down a strange path.");
     add(content);
@@ -27,6 +28,10 @@ public class footprints extends JFrame implements ActionListener {
     
     JLabel content3 = new JLabel("It's a werewolf! Do you wait for the werewolf to make the first move, or do you attack?");
     add(content3);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
     
     JButton attack = new JButton("Attack");
     attack.addActionListener(this);
@@ -45,10 +50,12 @@ public class footprints extends JFrame implements ActionListener {
     if (a.equals("Wait"))
           {
       new wereWolfWait().setVisible(true);
+      setVisible(false);
     }
-    if (a.equals("Bow"))
+    if (a.equals("Attack"))
           {
-      new blacksmith2().setVisible(true);
+      new attackWerewolf().setVisible(true);
+      setVisible(false);
     }
    }
 }

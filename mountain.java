@@ -72,10 +72,12 @@ public class mountain extends JFrame implements ActionListener {
     if (a.equals("Continue") && gameScreen2.sword == true)
           {
       new victory().setVisible(true);
+      setVisible(false);
     }
     else
           {
       new deathScreen().setVisible(true);
+      setVisible(false);
     }
    }
 }

@@ -68,10 +68,12 @@ public class gameScreen3 extends JFrame implements ActionListener {
     if (a.equals("Hide"))
           {
       new attackHide().setVisible(true);
+      setVisible(false);
     }
     if (a.equals("Fight"))
           {
       new fight().setVisible(true);
+      setVisible(false);
     }
    }
 }

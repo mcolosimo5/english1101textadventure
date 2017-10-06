@@ -19,6 +19,7 @@ public class deathScreen2 extends JFrame implements ActionListener  {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     
     JLabel contentGameScreen = new JLabel("You chose the wrong option and died.");
@@ -26,6 +27,9 @@ public class deathScreen2 extends JFrame implements ActionListener  {
     
     JLabel contentGameScreen2 = new JLabel("Would you like to try again?");
     add(contentGameScreen2);
+    
+    contentGameScreen.setForeground(Color.WHITE);
+    contentGameScreen2.setForeground(Color.WHITE);
     
     JButton yes = new JButton("Yes");
     yes.addActionListener(this);
@@ -44,11 +48,13 @@ public class deathScreen2 extends JFrame implements ActionListener  {
           {
       deathCount2 = deathCount2 +1;
       new backstory2().setVisible(true);
+      setVisible(false);
     }
      
     else if (a.equals("No"))
    {
       new levelScreen().setVisible(true);
+      setVisible(false);
     }
       
   }

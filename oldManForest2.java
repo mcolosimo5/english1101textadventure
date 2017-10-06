@@ -18,7 +18,7 @@ public class oldManForest2 extends JFrame  {
     setLayout(new FlowLayout());
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
-    
+    getContentPane().setBackground(new Color(116, 139, 178));
     
     JLabel content = new JLabel("The man Questions your name.");
     add(content);
@@ -31,6 +31,11 @@ public class oldManForest2 extends JFrame  {
     
     JLabel content4 = new JLabel("You tell him...");
     add(content4);
+    
+    content.setForeground(Color.WHITE);
+    content2.setForeground(Color.WHITE);
+    content3.setForeground(Color.WHITE);
+    content4.setForeground(Color.WHITE);
     
     final JTextField nameTextField = new JTextField(20);
     add(nameTextField);
@@ -50,15 +55,18 @@ public class oldManForest2 extends JFrame  {
       if (name.length() < 12)
       {
         new oldManForestDeath().setVisible(true);
+        setVisible(false);
       }
       
       else if (containsQ == false)
       {
         new oldManForestDeath().setVisible(true);
+        setVisible(false);
       }
       else if (containsQ == true && name.length() >= 12)
       {
         new investigation().setVisible(true);
+        setVisible(false);
       }
     }
     }
