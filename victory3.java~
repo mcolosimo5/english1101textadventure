@@ -2,16 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class cave3 extends JFrame implements ActionListener {
+public class victory3 extends JFrame implements ActionListener {
   
   private static final long serialVersionUID = 1L;
   
   public static void main (String args [])
   {
-    new cave3().setVisible(true);
+    new victory3().setVisible(true);
   }
   
-  public cave3() {
+  public victory3() {
     super("Play Game");
     setSize(800, 700);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -20,16 +20,19 @@ public class cave3 extends JFrame implements ActionListener {
     this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     getContentPane().setBackground(new Color(116, 139, 178));
     
-    JLabel content = new JLabel("You arrive at the cave, and you are face to face with the werewolf once again.");
+    JLabel content = new JLabel("You Completed Level 3 and beat Deja Vu!");
     add(content);
     
-    JLabel content2 = new JLabel("The werewolf runs into the cave. You follow the werewolf...");
+    JLabel content2 = new JLabel("You died " + deathScreen3.deathCount3 + " times while completing level 3, and " + deathScreen.deathCount + deathScreen2.deathCount2 + deathScreen3.deathCount3 " times throughout the entire game.");
     add(content2);
+    
+    JLabel content3 = new JLabel("You died " + deathScreen3.deathCount3 + " times while completing level 3.");
+    add(content3);
     
     content.setForeground(Color.WHITE);
     content2.setForeground(Color.WHITE);
     
-    JButton cont = new JButton("Continue");
+    JButton cont = new JButton("Return to Level Menu");
     cont.addActionListener(this);
     add(cont);
     
@@ -40,9 +43,9 @@ public class cave3 extends JFrame implements ActionListener {
   public void actionPerformed (ActionEvent e) {
     String a = e.getActionCommand();
     
-    if (a.equals("Continue"))
+    if (a.equals("Return to Level Menu"))
           {
-      new victory2().setVisible(true);
+      new levelScreen().setVisible(true);
       setVisible(false);
     }
    }
