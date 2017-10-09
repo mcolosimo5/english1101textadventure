@@ -65,6 +65,7 @@ public class oldManForest2 extends JFrame  {
       }
       else if (containsQ == true && name.length() >= 12)
       {
+        gameScreen.nameGood = name;
         new investigation().setVisible(true);
         setVisible(false);
       }

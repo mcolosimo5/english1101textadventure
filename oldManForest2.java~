@@ -55,15 +55,18 @@ public class oldManForest2 extends JFrame  {
       if (name.length() < 12)
       {
         new oldManForestDeath().setVisible(true);
+        setVisible(false);
       }
       
       else if (containsQ == false)
       {
         new oldManForestDeath().setVisible(true);
+        setVisible(false);
       }
       else if (containsQ == true && name.length() >= 12)
       {
         new investigation().setVisible(true);
+        setVisible(false);
       }
     }
     }

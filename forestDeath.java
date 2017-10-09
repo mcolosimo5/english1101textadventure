@@ -38,7 +38,7 @@ public class forestDeath extends JFrame implements ActionListener {
     
     if (a.equals("Continue"))
           {
-      new deathScreen().setVisible(true);
+      new deathScreen2().setVisible(true);
       setVisible(false);
     }
    }
